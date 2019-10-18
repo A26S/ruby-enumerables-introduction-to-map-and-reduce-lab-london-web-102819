@@ -5,34 +5,41 @@ def map_to_negativize(arr)
 end
 
 def map_to_no_change(arr)
-  
-  
-def map_to_double(source_array)
-  double_array = []
-  i = 0 
-  while i < source_array.count do
-    double_array.push(source_array[i] * 2)
+  nochange_arr = []
+  i = 0
+  while i < arr.length do
+    nochange_arr.push(arr[i])
     i += 1
   end
-double_array
+nochange_arr
 end
 
-def map_to_square(source_array)
-  square_array = []
+def map_to_double(arr)
+  double_arr = []
   i = 0 
-  while i < source_array.count do
-    square_array.push(source_array[i] ** 2)
+  while i < arr.length do
+    double_arr.push(arr[i] *2)
     i += 1
   end
-square_array
+double_arr
 end
 
-def reduce_to_total(source_array, starting_point=0)
-  total = starting_point
+def map_to_square(arr)
+  sqr_arr = []
   i = 0 
-  while i < source_array.count do
-    total += source_array[i]
+  while i < arr.length do
+    sqr_arr.push(arr[i] **2)
     i += 1
   end
-total
+sqr_arr
+end
+
+def reduce_to_total(arr, start)
+  value = start
+  i = 0 
+  while i < arr.length do
+    value + arr[i]
+    i += 1
+  end
+value
 end
